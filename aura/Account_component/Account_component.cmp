@@ -1,0 +1,22 @@
+<aura:component controller="Latest_ten_accounts">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="accountlist" type="Account[]" />
+    
+        <table>
+        <tr>
+            <td>
+                <b>Name</b>
+            </td>
+            <td>
+                <b>Industry</b>
+            </td>
+        </tr>
+        <aura:iteration items="{!v.accountlist}" var="accs" >
+            <tr>  
+                <td> {!accs.Name}  </td>
+                <td> {!accs.Industry}  </td>
+                
+            </tr> 
+         </aura:iteration>                                           
+    </table> 
+</aura:component>
